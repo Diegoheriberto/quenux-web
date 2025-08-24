@@ -1,111 +1,86 @@
 'use client';
 
-import { useState } from 'react';
-
-export const metadata = {
-  title: 'Eliminar cuenta | AlertaEC – Quenux',
-  description: 'Solicita la eliminación de tu cuenta y datos asociados de AlertaEC.',
-};
+import { useState, type FormEvent } from 'react';
 
 export default function DeleteAccountPage() {
   const [email, setEmail] = useState('');
   const [appName, setAppName] = useState('AlertaEC');
   const [comment, setComment] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const to = 'quenux@quenux.app';
+
     const subject = `Solicitud de eliminación de cuenta – ${appName}`;
-    const body = `Hola equipo Quenux,
+    const body =
+      `Hola equipo Quenux,\n\n` +
+      `Quiero solicitar la eliminación de mi cuenta y de los datos asociados en ${appName}.\n\n` +
+      `Correo de la cuenta: ${email}\n` +
+      (comment ? `Comentario adicional: ${comment}\n` : '') +
+      `\nGracias.`;
 
-Quiero solicitar la eliminación de mi cuenta y de los datos asociados en ${appName}.
-
-Correo de la cuenta: ${email}
-
-Comentario adicional (opcional):
-${comment}
-
-Confirmo que soy el titular de esta cuenta y entiendo que la eliminación es permanente.
-Gracias.`;
-
-    const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    // abre cliente de correo del usuario
+    window.location.href = `mailto:quenux@quenux.app?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
-    <main className="min-h-[70vh] flex items-center justify-center px-4 py-16">
-      <div className="w-full max-w-xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-        <div className="text-center mb-6">
-          <h1 className="text-2xl font-semibold">Eliminar mi cuenta</h1>
-          <p className="text-gray-600 mt-2">
-            Completa el formulario para solicitar la eliminación de tu cuenta y
-            datos asociados de <strong>AlertaEC</strong>. Te confirmaremos por
-            correo cuando el proceso se complete.
-          </p>
-        </div>
+    <main style={{ maxWidth: 680, margin: '40px auto', padding: '0 16px', lineHeight: 1.6 }}>
+      <h1>Eliminar cuenta</h1>
+      <p>
+        Completa este formulario para solicitar la eliminación de tu cuenta y de los datos asociados a <strong>{appName}</strong>.
+      </p>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium">Aplicación</label>
-            <select
-              className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2"
-              value={appName}
-              onChange={(e) => setAppName(e.target.value)}
-            >
-              <option>AlertaEC</option>
-            </select>
-          </div>
+      <form onSubmit={handleSubmit} style={{ marginTop: 24 }}>
+        <label style={{ display: 'block', marginBottom: 12 }}>
+          Correo de la cuenta
+          <input
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="tucorreo@ejemplo.com"
+            style={{ display: 'block', width: '100%', marginTop: 6, padding: 10, borderRadius: 8, border: '1px solid #ddd' }}
+          />
+        </label>
 
-          <div>
-            <label className="block text-sm font-medium">
-              Correo de la cuenta <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="email"
-              required
-              placeholder="tu-correo@ejemplo.com"
-              className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
+        <label style={{ display: 'block', marginBottom: 12 }}>
+          App (opcional)
+          <input
+            type="text"
+            value={appName}
+            onChange={(e) => setAppName(e.target.value)}
+            style={{ display: 'block', width: '100%', marginTop: 6, padding: 10, borderRadius: 8, border: '1px solid #ddd' }}
+          />
+        </label>
 
-          <div>
-            <label className="block text-sm font-medium">Comentario (opcional)</label>
-            <textarea
-              rows={4}
-              placeholder="Información adicional para identificar la cuenta…"
-              className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2"
-              value={comment}
-              onChange={(e) => setComment(e.target.value)}
-            />
-          </div>
+        <label style={{ display: 'block', marginBottom: 16 }}>
+          Comentario adicional (opcional)
+          <textarea
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+            rows={4}
+            style={{ display: 'block', width: '100%', marginTop: 6, padding: 10, borderRadius: 8, border: '1px solid #ddd' }}
+          />
+        </label>
 
-          <button
-            type="submit"
-            className="w-full rounded-xl bg-blue-600 px-4 py-3 font-medium text-white hover:bg-blue-700 active:bg-blue-800"
-          >
-            Enviar solicitud por correo
-          </button>
-        </form>
+        <button
+          type="submit"
+          style={{
+            padding: '12px 16px',
+            borderRadius: 10,
+            border: 0,
+            cursor: 'pointer',
+            background: '#0ea5e9',
+            color: 'white',
+            fontWeight: 600
+          }}
+        >
+          Enviar solicitud por email
+        </button>
 
-        <div className="mt-6 text-sm text-gray-600 space-y-2">
-          <p>
-            Si prefieres, también puedes escribirnos directamente a{' '}
-            <a
-              href="mailto:quenux@quenux.app?subject=Solicitud%20de%20eliminaci%C3%B3n%20de%20cuenta"
-              className="text-blue-600 underline"
-            >
-              quenux@quenux.app
-            </a>
-            .
-          </p>
-          <ul className="list-disc pl-5">
-            <li>Eliminamos la cuenta y datos personales; podemos conservar registros técnicos mínimos por motivos legales/seguridad.</li>
-            <li>La eliminación se procesa tras verificar la titularidad del correo (máx. 30 días).</li>
-          </ul>
-        </div>
-      </div>
+        <p style={{ fontSize: 13, color: '#666', marginTop: 12 }}>
+          Se abrirá tu cliente de correo con el mensaje prellenado dirigido a <b>quenux@quenux.app</b>.
+        </p>
+      </form>
     </main>
   );
 }
