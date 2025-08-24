@@ -3,34 +3,71 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main style={{maxWidth: 880, margin: "40px auto", padding: "0 16px", textAlign: "center", lineHeight: 1.6}}>
-      <Image
-        src="/quenux-logo.png"
-        alt="Logo Quenux"
-        width={200}
-        height={200}
-        style={{ margin: "0 auto 20px" }}
-      />
-      <h1>Quenux</h1>
-      <p><strong>Innovación en apps desde Ecuador</strong></p>
+    <main className="mx-auto max-w-3xl px-4 py-14 text-center">
+      {/* LOGO + TITLE */}
+      <div className="mx-auto mb-6 flex w-full flex-col items-center">
+        <div className="rounded-full bg-white/80 p-4 shadow-md ring-1 ring-black/5">
+          <Image
+            src="/quenux-logo.png"
+            alt="Logo Quenux"
+            width={160}
+            height={160}
+            priority
+            className="rounded-full"
+          />
+        </div>
+        <h1 className="mt-6 text-4xl font-semibold tracking-tight">Quenux</h1>
+        <p className="mt-2 text-lg text-slate-600">Innovación en apps desde Ecuador</p>
+      </div>
 
-      <section style={{marginTop: "40px"}}>
-        <h2>Nuestras Apps</h2>
-        <ul style={{listStyle: "none", padding: 0}}>
-          <li>
-            <h3>AlertaEC</h3>
-            <Link href="/legal/privacy/alertaec">Política de Privacidad</Link> ·{" "}
-            <Link href="/legal/terms/alertaec">Términos de Uso</Link>
-          </li>
-        </ul>
+      {/* CTA / APP CARD */}
+      <section className="mx-auto mt-10 grid gap-6">
+        <div className="mx-auto w-full max-w-xl rounded-2xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur">
+          <h2 className="text-xl font-medium text-slate-800">Nuestras Apps</h2>
+          <div className="mt-4 rounded-xl bg-slate-50 p-5 text-left ring-1 ring-slate-100">
+            <h3 className="text-lg font-semibold">AlertaEC</h3>
+            <p className="mt-1 text-sm text-slate-600">
+              Zonas peligrosas, alertas y mapa para moverte más seguro.
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <Link
+                href="/legal/privacy/alertaec"
+                className="text-sm font-medium text-slate-700 underline underline-offset-4 hover:text-slate-900"
+              >
+                Política de Privacidad
+              </Link>
+              <span className="text-slate-300">·</span>
+              <Link
+                href="/legal/terms/alertaec"
+                className="text-sm font-medium text-slate-700 underline underline-offset-4 hover:text-slate-900"
+              >
+                Términos de Uso
+              </Link>
+              <Link
+                href="#"
+                className="ml-auto inline-flex items-center rounded-xl px-4 py-2 text-sm font-semibold ring-1 ring-inset transition
+                           bg-[#0ea5e9] text-white hover:bg-[#0284c7] ring-[#0ea5e9]/30"
+                aria-disabled
+              >
+                Ver en Play Store (próximamente)
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <footer style={{marginTop: "60px", fontSize: "0.9em", color: "#555"}}>
+      {/* FOOTER */}
+      <footer className="mt-16 border-t border-slate-200/70 pt-6 text-sm text-slate-500">
         <p>© {new Date().getFullYear()} Quenux · Todos los derechos reservados</p>
-        <p>
-          Contacto: <a href="mailto:quenux@quenux.app">quenux@quenux.app</a>
+        <p className="mt-1">
+          Contacto:{" "}
+          <a className="font-medium text-slate-700 underline underline-offset-4" href="mailto:quenux@quenux.app">
+            quenux@quenux.app
+          </a>
         </p>
       </footer>
     </main>
   );
 }
+
