@@ -7,14 +7,14 @@ export default function Home() {
       {/* LOGO + TITLE */}
       <div className="mx-auto mb-6 flex w-full flex-col items-center">
         <div className="rounded-full bg-white/80 p-4 shadow-md ring-1 ring-black/5">
-          <Image
-            src="/quenux-logo.png"
-            alt="Logo Quenux"
-            width={160}
-            height={160}
-            priority
-            className="rounded-full"
-          />
+        <Image
+  src="/quenux-logo.png"
+  alt="Logo Quenux"
+  width={160}
+  height={160}
+  priority
+  className="rounded-full transition-transform duration-300 hover:scale-105"
+/>
         </div>
         <h1 className="mt-6 text-4xl font-semibold tracking-tight">Quenux</h1>
         <p className="mt-2 text-lg text-slate-600">Innovación en apps desde Ecuador</p>
@@ -44,14 +44,15 @@ export default function Home() {
               >
                 Términos de Uso
               </Link>
-              <Link
-                href="#"
-                className="ml-auto inline-flex items-center rounded-xl px-4 py-2 text-sm font-semibold ring-1 ring-inset transition
-                           bg-[#0ea5e9] text-white hover:bg-[#0284c7] ring-[#0ea5e9]/30"
-                aria-disabled
-              >
-                Ver en Play Store (próximamente)
-              </Link>
+           <Link
+  href="#"
+  className="ml-auto inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold ring-1 ring-inset transition
+             bg-[#0ea5e9] text-white hover:bg-[#0284c7] ring-[#0ea5e9]/30"
+  aria-disabled
+>
+  <Image src="/play.svg" alt="" width={16} height={16} />
+  Ver en Play Store (próximamente)
+</Link>
             </div>
           </div>
         </div>
