@@ -25,9 +25,7 @@ export default function Home() {
         <h1 style={{ fontSize: 34, fontWeight: 800, marginTop: 12, letterSpacing: -0.3 }}>
           Quenux
         </h1>
-        <p style={{ fontSize: 16, color: "#475569" }}>
-          Innovación en apps desde Ecuador
-        </p>
+        <p style={{ fontSize: 16, color: "#475569" }}>Innovación en apps desde Ecuador</p>
       </header>
 
       {/* Apps grid */}
@@ -97,6 +95,7 @@ export default function Home() {
               Ver en Play Store
             </a>
 
+            {/* 👇 Rutas corregidas: alertec */}
             <div style={{ display: "inline-flex", gap: 12, alignItems: "center" }}>
               <Link href="/legal/privacy/alertec" style={{ fontSize: 13, color: "#0f172a" }}>
                 Privacidad
