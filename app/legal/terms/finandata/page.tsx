@@ -8,64 +8,45 @@ export default function Page() {
         lineHeight: 1.6,
       }}
     >
-      <h1>Política de Privacidad de Finandata</h1>
+      <h1>Términos de Uso de Finandata</h1>
       <p>
         <strong>Última actualización:</strong> 4 de octubre de 2025
       </p>
 
-      <h2>Responsable</h2>
+      <h2>1. Aceptación</h2>
       <p>
-        Finandata es una aplicación informativa desarrollada por{" "}
-        <strong>Quenux</strong>. Contacto:{" "}
-        <a href="mailto:contacto@quenux.com">contacto@quenux.com</a>
+        Al usar la aplicación <strong>Finandata</strong>, aceptas los presentes
+        términos de uso y la política de privacidad.
       </p>
 
-      <h2>Datos tratados</h2>
-      <ul>
-        <li>
-          <strong>Datos financieros públicos:</strong> información oficial
-          publicada por la Superintendencia de Economía Popular y Solidaria
-          (SEPS).
-        </li>
-        <li>
-          <strong>Datos técnicos:</strong> dirección IP, sistema operativo,
-          versión de la app y estadísticas de uso.
-        </li>
-        <li>
-          <strong>No se recopilan datos personales sensibles</strong> como
-          nombres, direcciones o identificaciones.
-        </li>
-      </ul>
-
-      <h2>Finalidad</h2>
+      <h2>2. Propósito</h2>
       <p>
-        Mostrar información financiera comparativa de cooperativas de ahorro y
-        crédito con fines educativos y de transparencia. Finandata no ofrece
-        servicios financieros ni gestión de fondos.
+        Finandata ofrece información pública financiera con fines educativos y
+        de transparencia. No realiza asesoría ni gestiona inversiones.
       </p>
 
-      <h2>Proveedores</h2>
+      <h2>3. Fuentes de información</h2>
       <p>
-        Finandata usa servicios de Google Firebase (Firestore, Hosting,
-        Authentication) con seguridad de nivel industrial.
+        Los datos provienen de la Superintendencia de Economía Popular y
+        Solidaria (SEPS) y otras fuentes públicas verificables.
       </p>
 
-      <h2>Seguridad</h2>
+      <h2>4. Limitación de responsabilidad</h2>
       <p>
-        Los datos se cifran en tránsito (HTTPS) y se almacenan en servidores con
-        controles de acceso limitados.
+        Quenux no se responsabiliza por errores u omisiones en los datos ni por
+        decisiones tomadas con base en la información presentada.
       </p>
 
-      <h2>Derechos del usuario</h2>
+      <h2>5. Propiedad intelectual</h2>
       <p>
-        Puedes solicitar la eliminación de tu cuenta o datos escribiendo a{" "}
-        <a href="mailto:contacto@quenux.com">contacto@quenux.com</a>.
+        Los textos, gráficos y análisis generados por Finandata son propiedad de
+        Quenux y no pueden reproducirse sin autorización.
       </p>
 
-      <h2>Actualizaciones</h2>
+      <h2>6. Cambios</h2>
       <p>
-        Esta política puede actualizarse en cualquier momento. Las
-        modificaciones se publicarán en esta misma sección del sitio web.
+        Quenux podrá modificar estos términos en cualquier momento, notificando
+        las actualizaciones en este mismo sitio web.
       </p>
 
       <footer
