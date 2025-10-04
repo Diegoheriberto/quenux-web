@@ -1,65 +1,83 @@
 export default function Page() {
   return (
-    <main style={{ maxWidth: 880, margin: "40px auto", padding: "0 16px", lineHeight: 1.6 }}>
-      <h1>Términos de Uso de Finandata</h1>
-      <p><strong>Última actualización:</strong> 4 de octubre de 2025</p>
-
-      <h2>Aceptación de los términos</h2>
+    <main
+      style={{
+        maxWidth: 880,
+        margin: "40px auto",
+        padding: "0 16px",
+        lineHeight: 1.6,
+      }}
+    >
+      <h1>Política de Privacidad de Finandata</h1>
       <p>
-        Al acceder o usar Finandata, aceptas cumplir con estos Términos de Uso y con todas las leyes aplicables.
-        Si no estás de acuerdo con alguno de los términos, por favor no utilices la aplicación.
+        <strong>Última actualización:</strong> 4 de octubre de 2025
       </p>
 
-      <h2>Descripción del servicio</h2>
+      <h2>Responsable</h2>
       <p>
-        Finandata es una aplicación informativa que presenta datos financieros públicos sobre cooperativas de ahorro y crédito
-        en Ecuador, basados en información de la Superintendencia de Economía Popular y Solidaria (SEPS).
-      </p>
-      <p>
-        Finandata no es una institución financiera, no ofrece productos de inversión, ni gestiona fondos de usuarios.
+        Finandata es una aplicación informativa desarrollada por{" "}
+        <strong>Quenux</strong>. Contacto:{" "}
+        <a href="mailto:contacto@quenux.com">contacto@quenux.com</a>
       </p>
 
-      <h2>Uso permitido</h2>
+      <h2>Datos tratados</h2>
       <ul>
-        <li>Usar la aplicación únicamente para fines personales e informativos.</li>
-        <li>No modificar, copiar ni distribuir el contenido sin autorización.</li>
-        <li>No utilizar la app para fines fraudulentos, difamatorios o ilegales.</li>
+        <li>
+          <strong>Datos financieros públicos:</strong> información oficial
+          publicada por la Superintendencia de Economía Popular y Solidaria
+          (SEPS).
+        </li>
+        <li>
+          <strong>Datos técnicos:</strong> dirección IP, sistema operativo,
+          versión de la app y estadísticas de uso.
+        </li>
+        <li>
+          <strong>No se recopilan datos personales sensibles</strong> como
+          nombres, direcciones o identificaciones.
+        </li>
       </ul>
 
-      <h2>Propiedad intelectual</h2>
+      <h2>Finalidad</h2>
       <p>
-        Todos los derechos de diseño, interfaz, código y marca “Finandata” pertenecen a <strong>Quenux</strong>.
-        Los datos financieros mostrados pertenecen a sus respectivas fuentes oficiales.
+        Mostrar información financiera comparativa de cooperativas de ahorro y
+        crédito con fines educativos y de transparencia. Finandata no ofrece
+        servicios financieros ni gestión de fondos.
       </p>
 
-      <h2>Limitación de responsabilidad</h2>
+      <h2>Proveedores</h2>
       <p>
-        Finandata se proporciona “tal cual” sin garantías de ningún tipo.  
-        Quenux no se responsabiliza por errores, omisiones o decisiones tomadas con base en la información presentada.
+        Finandata usa servicios de Google Firebase (Firestore, Hosting,
+        Authentication) con seguridad de nivel industrial.
       </p>
 
-      <h2>Enlaces externos</h2>
+      <h2>Seguridad</h2>
       <p>
-        La aplicación puede incluir enlaces a sitios externos (por ejemplo, SEPS, cooperativas o medios oficiales).
-        Quenux no es responsable del contenido o políticas de dichos sitios.
+        Los datos se cifran en tránsito (HTTPS) y se almacenan en servidores con
+        controles de acceso limitados.
       </p>
 
-      <h2>Modificaciones</h2>
+      <h2>Derechos del usuario</h2>
       <p>
-        Quenux se reserva el derecho de modificar estos Términos en cualquier momento.
-        Las actualizaciones se publicarán en esta misma sección.
+        Puedes solicitar la eliminación de tu cuenta o datos escribiendo a{" "}
+        <a href="mailto:contacto@quenux.com">contacto@quenux.com</a>.
       </p>
 
-      <h2>Contacto</h2>
+      <h2>Actualizaciones</h2>
       <p>
-        Para cualquier consulta, escríbenos a  
-        <a href="mailto:contacto@quenux.com"> contacto@quenux.com</a>.
+        Esta política puede actualizarse en cualquier momento. Las
+        modificaciones se publicarán en esta misma sección del sitio web.
       </p>
 
-      <hr style={{ marginTop: 40, opacity: 0.3 }} />
-      <p style={{ fontSize: 14, color: "#666" }}>
-        © {new Date().getFullYear()} Quenux / Finandata — Todos los derechos reservados.
-      </p>
+      <footer
+        style={{
+          marginTop: "3rem",
+          textAlign: "center",
+          fontSize: "0.9rem",
+          color: "#777",
+        }}
+      >
+        © 2025 Quenux / Finandata — Todos los derechos reservados.
+      </footer>
     </main>
   );
 }
