@@ -1,53 +1,87 @@
 export default function Page() {
   return (
-    <main style={{ maxWidth: 880, margin: "40px auto", padding: "0 16px", lineHeight: 1.6 }}>
+    <main
+      style={{
+        maxWidth: 880,
+        margin: "40px auto",
+        padding: "0 16px",
+        lineHeight: 1.6,
+      }}
+    >
       <h1>Política de Privacidad de AlertaEC</h1>
-      <p><strong>Última actualización:</strong> 4 de octubre de 2025</p>
+      <p>
+        <strong>Última actualización:</strong> 4 de octubre de 2025
+      </p>
 
       <h2>Responsable</h2>
       <p>
-        AlertaEC es una aplicación de Quenux. Contacto: <a href="mailto:quenux@quenux.app">quenux@quenux.app</a>
+        AlertaEC es una aplicación desarrollada por <strong>Quenux</strong>.
+        Contacto: <a href="mailto:contacto@quenux.com">contacto@quenux.com</a>
       </p>
 
-      <h2>Datos que tratamos</h2>
+      <h2>Datos tratados</h2>
       <ul>
-        <li><strong>Ubicación (opcional):</strong> para centrar el mapa y alertas de proximidad.</li>
-        <li><strong>Contenido opcional de reportes:</strong> texto e imágenes enviados por el usuario (se publica solo si es aprobado).</li>
-        <li><strong>Identificadores de notificaciones:</strong> token FCM para enviarte alertas.</li>
-        <li><strong>Diagnósticos técnicos anónimos:</strong> errores/usage para mejorar estabilidad.</li>
+        <li>
+          <strong>Ubicación:</strong> se usa únicamente para mostrar alertas y
+          zonas peligrosas cercanas al usuario.
+        </li>
+        <li>
+          <strong>Cuenta de usuario:</strong> correo electrónico y nombre, si se
+          registra o inicia sesión con Google.
+        </li>
+        <li>
+          <strong>Reportes:</strong> si el usuario decide compartir un incidente,
+          se almacenan coordenadas, tipo de incidente e imagen opcional.
+        </li>
+        <li>
+          <strong>No se recopilan datos personales sensibles</strong> como cédula,
+          dirección o información financiera.
+        </li>
       </ul>
 
-      <h2>Finalidades</h2>
-      <p>Prestar el servicio (mapa, alertas, reportes), mejorar estabilidad y prevenir abusos.</p>
-
-      <h2>Base legal</h2>
-      <p>Consentimiento (permisos de ubicación/cámara) e interés legítimo en seguridad.</p>
-
-      <h2>Almacenamiento y retención</h2>
+      <h2>Finalidad</h2>
       <p>
-        Reportes aprobados se conservan mientras sean relevantes o hasta solicitar eliminación.
-        Tokens FCM mientras uses la app o hasta su expiración. Logs por periodos razonables para diagnóstico.
+        Mostrar zonas peligrosas y alertas en tiempo real para mejorar la
+        seguridad ciudadana. AlertaEC no comparte datos con terceros ni
+        utiliza la información con fines comerciales.
       </p>
 
       <h2>Proveedores</h2>
-      <p>Google Firebase (Hosting, Firestore, Crashlytics, Cloud Messaging) y servicios equivalentes con medidas de seguridad adecuadas.</p>
+      <p>
+        La app utiliza servicios de <strong>Google Firebase</strong> (Firestore,
+        Authentication, Storage) con estándares de seguridad de nivel
+        industrial.
+      </p>
 
       <h2>Seguridad</h2>
-      <p>Cifrado en tránsito (HTTPS), reglas de seguridad y controles de acceso. Ningún sistema es 100% infalible.</p>
+      <p>
+        Los datos se cifran en tránsito (HTTPS) y se almacenan en servidores con
+        acceso restringido. Solo el usuario puede eliminar su cuenta o reportes
+        creados.
+      </p>
 
-      <h2>Tus derechos</h2>
-      <p>Puedes acceder, corregir o solicitar eliminación escribiendo a <a href="mailto:quenux@quenux.app">quenux@quenux.app</a>. Puedes revocar permisos desde ajustes del sistema (ubicación/cámara).</p>
-
-      <h2>Menores</h2>
-      <p>No dirigida a menores de 13 años.</p>
+      <h2>Derechos del usuario</h2>
+      <p>
+        Puedes solicitar la eliminación de tu cuenta o datos enviando un correo
+        a <a href="mailto:contacto@quenux.com">contacto@quenux.com</a>.
+      </p>
 
       <h2>Actualizaciones</h2>
-      <p>Esta política puede actualizarse y se publicará en esta misma URL.</p>
-
-      <hr style={{ marginTop: 40, opacity: 0.3 }} />
-      <p style={{ fontSize: 14, color: "#666" }}>
-        © {new Date().getFullYear()} Quenux / AlertaEC — Todos los derechos reservados.
+      <p>
+        Esta política puede actualizarse en cualquier momento. Las
+        modificaciones se publicarán en esta misma sección del sitio oficial.
       </p>
+
+      <footer
+        style={{
+          marginTop: "3rem",
+          textAlign: "center",
+          fontSize: "0.9rem",
+          color: "#777",
+        }}
+      >
+        © 2025 Quenux / AlertaEC — Todos los derechos reservados.
+      </footer>
     </main>
   );
 }
