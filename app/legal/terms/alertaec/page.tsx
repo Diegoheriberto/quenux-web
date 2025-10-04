@@ -1,65 +1,46 @@
 export default function Page() {
   return (
-    <main
-      style={{
-        maxWidth: 880,
-        margin: "40px auto",
-        padding: "0 16px",
-        lineHeight: 1.6,
-      }}
-    >
+    <main style={{ maxWidth: 880, margin: "40px auto", padding: "0 16px", lineHeight: 1.6 }}>
       <h1>Términos de Uso de AlertaEC</h1>
+      <p><strong>Última actualización:</strong> 4 de octubre de 2025</p>
+
+      <h2>1. Aceptación de los términos</h2>
       <p>
-        <strong>Última actualización:</strong> 4 de octubre de 2025
+        Al usar la aplicación <strong>AlertaEC</strong> aceptas estos términos y la Política de Privacidad.
+        Si no estás de acuerdo, por favor no utilices la aplicación.
       </p>
 
-      <h2>1. Aceptación</h2>
+      <h2>2. Propósito del servicio</h2>
       <p>
-        Al utilizar la aplicación <strong>AlertaEC</strong>, aceptas estos
-        términos de uso y la política de privacidad correspondiente.
+        AlertaEC ofrece información sobre seguridad ciudadana mediante alertas, mapas y reportes colaborativos.
+        No sustituye a las autoridades ni garantiza exactitud absoluta.
       </p>
 
-      <h2>2. Propósito</h2>
+      <h2>3. Responsabilidad del usuario</h2>
       <p>
-        La app ofrece información de seguridad ciudadana y permite reportar
-        incidentes de manera voluntaria. No garantiza la veracidad ni la
-        disponibilidad de los datos publicados.
+        Los reportes publicados son responsabilidad exclusiva de sus autores.
+        Quenux no se responsabiliza por daños, pérdidas o uso indebido de la información mostrada.
       </p>
 
-      <h2>3. Responsabilidad</h2>
-      <p>
-        Quenux no se responsabiliza por daños directos o indirectos derivados
-        del uso de la aplicación. Los reportes ciudadanos son responsabilidad
-        exclusiva de los usuarios que los generan.
-      </p>
+      <h2>4. Uso adecuado</h2>
+      <ul>
+        <li>No publicar información falsa, difamatoria o ilegal.</li>
+        <li>No usar la app para fines políticos, publicitarios o de spam.</li>
+        <li>No intentar vulnerar la seguridad o manipular datos de otros usuarios.</li>
+      </ul>
 
-      <h2>4. Contenido generado por usuarios</h2>
+      <h2>5. Contenido y moderación</h2>
       <p>
-        El contenido reportado será revisado antes de su publicación para
-        prevenir abusos. Quenux podrá eliminar cualquier información ofensiva o
-        inexacta sin previo aviso.
-      </p>
-
-      <h2>5. Uso adecuado</h2>
-      <p>
-        Está prohibido utilizar AlertaEC para actividades ilegales, spam o
-        difusión de noticias falsas.
+        Los reportes pueden ser revisados o eliminados por el equipo de moderación
+        si incumplen estos términos o promueven desinformación.
       </p>
 
       <h2>6. Cambios en los términos</h2>
       <p>
-        Quenux podrá modificar estos términos en cualquier momento, publicando
-        la versión actualizada en este mismo enlace.
+        Quenux puede actualizar estos términos en cualquier momento, y las modificaciones se publicarán aquí mismo.
       </p>
 
-      <footer
-        style={{
-          marginTop: "3rem",
-          textAlign: "center",
-          fontSize: "0.9rem",
-          color: "#777",
-        }}
-      >
+      <footer style={{ marginTop: "3rem", textAlign: "center", fontSize: "0.9rem", color: "#777" }}>
         © 2025 Quenux / AlertaEC — Todos los derechos reservados.
       </footer>
     </main>
