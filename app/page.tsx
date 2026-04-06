@@ -119,7 +119,7 @@ export default function Home() {
         />
 
         {/* Avark */}
-        <section>
+        <section style={{ marginBottom: 18 }}>
           <h3 style={{ marginBottom: 8 }}>Avark</h3>
           <p style={{ fontSize: "0.95rem", color: "#666", marginBottom: 12 }}>
             Launcher seguro y discreto.
@@ -132,6 +132,35 @@ export default function Home() {
               Política de Privacidad
             </Link>
             <Link href="/legal/terms/avark" style={{ fontSize: "0.9rem" }}>
+              Términos de Uso
+            </Link>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div
+          style={{
+            height: 1,
+            background: "rgba(0,0,0,0.08)",
+            margin: "18px 0",
+          }}
+        />
+
+        {/* ScanSafe */}
+        <section>
+          <h3 style={{ marginBottom: 8 }}>ScanSafe</h3>
+          <p style={{ fontSize: "0.95rem", color: "#666", marginBottom: 12 }}>
+            Analiza mensajes y detecta posibles estafas antes de caer.
+          </p>
+
+          <div style={{ marginBottom: 12 }}>
+            <Link
+              href="/legal/privacy/scansafe"
+              style={{ marginRight: 16, fontSize: "0.9rem" }}
+            >
+              Política de Privacidad
+            </Link>
+            <Link href="/legal/terms/scansafe" style={{ fontSize: "0.9rem" }}>
               Términos de Uso
             </Link>
           </div>
@@ -153,4 +182,3 @@ export default function Home() {
     </main>
   );
 }
-
