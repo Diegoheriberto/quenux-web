@@ -1,4 +1,3 @@
-:::writing{variant="document" id="64128"}
 export default function Page() {
   return (
     <main
@@ -122,9 +121,3 @@ export default function Page() {
     </main>
   );
 }
-:::
-
-Luego haces commit otra vez. Cuando GitHub muestre el visto verde, prueba:
-
-```text
-https://quenux-web.vercel.app/delete-account/alva
